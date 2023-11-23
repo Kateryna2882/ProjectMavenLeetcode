@@ -2,23 +2,26 @@ package org.example;
 
 public class JewelsAndStones {
     public static int numJewelsInStones(String jewels, String stones) {
+        int count = 0;
         StringBuilder result = new StringBuilder();
+        result.append(jewels);
 
-        stones.chars()
-                .filter(jewels::contains)
-                .forEach(result::append);
+        for (char c : stones.toCharArray()) {
+            if (result.toString().contains(String.valueOf(c)))
+                count++;
+        }
 
-        return result.length();
+        return count;
     }
 
     public static void main(String[] args) {
         String jewels1 = "aA";
         String stones1 = "aAAbbbb";
-        System.out.println(numJewelsInStones(jewels1, stones1)); // Output: 3
+        System.out.println(numJewelsInStones(jewels1, stones1));
 
         String jewels2 = "z";
         String stones2 = "ZZ";
-        System.out.println(numJewelsInStones(jewels2, stones2)); // Output: 0
+        System.out.println(numJewelsInStones(jewels2, stones2));
     }
 }
 
