@@ -13,15 +13,5 @@ public class JewelsAndStones {
 
         return count;
     }
-
-    public static void main(String[] args) {
-        String jewels1 = "aA";
-        String stones1 = "aAAbbbb";
-        System.out.println(numJewelsInStones(jewels1, stones1));
-
-        String jewels2 = "z";
-        String stones2 = "ZZ";
-        System.out.println(numJewelsInStones(jewels2, stones2));
-    }
 }
 

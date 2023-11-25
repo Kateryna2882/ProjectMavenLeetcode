@@ -22,12 +22,4 @@ public class BalloonSolver {
 
         return minInstances;
     }
-
-    public static void main(String[] args) {
-
-        System.out.println(maxNumberOfBalloons("nlaebolko")); // 1
-        System.out.println(maxNumberOfBalloons("loonbalxballpoon")); // 2
-        System.out.println(maxNumberOfBalloons("leetcode")); // 0
-        System.out.println(maxNumberOfBalloons("balon")); // 0
-    }
 }
